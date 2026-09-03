@@ -8,7 +8,7 @@ const eventRoutes = require("./routes/eventRoutes");
 const contactRoutes = require("./routes/contactRoutes");
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // ================================
 // MIDDLEWARE
@@ -66,7 +66,7 @@ app.use("/api", (req, res) => {
 // SERVER
 // ================================
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
     console.log("");
     console.log("====================================");
     console.log("🚀 E-CELL BAREILLY COLLEGE");
