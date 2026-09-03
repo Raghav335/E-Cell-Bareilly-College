@@ -10,7 +10,9 @@ async function loadTeam() {
 
     try {
 
-        const response = await fetch("/api/members");
+        const response = await fetch(
+    "https://e-cell-bareilly-college.onrender.com/api/members"
+);
         const result = await response.json();
 
         console.log("Team API:", result);
