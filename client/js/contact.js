@@ -44,9 +44,9 @@ if (contactForm) {
 
         try {
 
-            const response = await fetch(
-                "/api/contacts/message",
-                {
+        const response = await fetch(
+    "https://e-cell-bareilly-college.onrender.com/api/contacts/message",
+    {
                     method: "POST",
 
                     headers: {
