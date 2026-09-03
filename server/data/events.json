@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Entrepreneurship Awareness Session",
+    "date": "Coming Soon",
+    "location": "Bareilly College",
+    "description": "An interactive session focused on entrepreneurship, innovation and startup awareness.",
+    "image": "/assets/images/events/event-1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Innovation & Startup Workshop",
+    "date": "Coming Soon",
+    "location": "Bareilly College",
+    "description": "A practical workshop designed to encourage students to transform ideas into meaningful solutions.",
+    "image": "/assets/images/events/event-2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "E-Cell Student Interaction",
+    "date": "Coming Soon",
+    "location": "Bareilly College",
+    "description": "An interactive session connecting students with entrepreneurship, innovation and the E-Cell community.",
+    "image": "/assets/images/events/event-3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Ideas to Impact",
+    "date": "Coming Soon",
+    "location": "Bareilly College",
+    "description": "A platform for students to explore ideas, develop solutions and create meaningful impact.",
+    "image": "/assets/images/events/event-4.jpg"
+  }
+]
