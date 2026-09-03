@@ -17,7 +17,9 @@ joinForm.addEventListener("submit", async (e) => {
 
     try {
 
-        const response = await fetch("/api/contacts", {
+        const response = await fetch(
+    "https://e-cell-bareilly-college.onrender.com/api/contacts",
+    {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
