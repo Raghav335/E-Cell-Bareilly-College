@@ -10,7 +10,9 @@ async function loadEvents() {
 
     try {
 
-        const response = await fetch("/api/events");
+        const response = await fetch(
+    "https://e-cell-bareilly-college.onrender.com/api/events"
+);
         const result = await response.json();
 
         console.log("Events API:", result);
