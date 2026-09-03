@@ -770,13 +770,3 @@ This project is developed for E-Cell, Bareilly College for educational, institut
 
 ⭐ E-Cell Bareilly College — Think Beyond. Build Beyond.
 
-**Ab `Ctrl + S` karo.** ✅
-
-Uske baad CMD mein:
-
-```cmd
-git add README.md
-git commit -m "Add professional README"
-git push origin main
-
-Phir GitHub refresh karna — README show ho jayega.
