@@ -1,5 +1,5 @@
 const API_URL =
-    "http://localhost:5000/api/admin";
+    "https://e-cell-bareilly-college.onrender.com/api/admin";
 const loginForm = document.getElementById("loginForm");
 const loginMessage = document.getElementById("loginMessage");
 const loginBtn = document.getElementById("loginBtn");
