@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>President Dashboard | E-Cell Bareilly College</title>
+
+    <link
+        rel="stylesheet"
+        href="css/admin.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            E-CELL
+        </div>
+
+        <h2>President Panel</h2>
+
+        <p class="college-name">
+            Bareilly College
+        </p>
+
+        <nav>
+
+            <button
+                class="nav-btn active"
+                onclick="showSection('dashboard')"
+            >
+                Dashboard
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="showSection('applications')"
+            >
+                Join Applications
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="showSection('messages')"
+            >
+                Contact Queries
+            </button>
+
+        </nav>
+
+        <button
+            class="logout-btn"
+            onclick="logout()"
+        >
+            Logout
+        </button>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1 id="pageTitle">
+                    President Dashboard
+                </h1>
+
+                <p>
+                    E-Cell Bareilly College Administration
+                </p>
+            </div>
+
+            <div class="admin-info">
+
+                <span>
+                    President
+                </span>
+
+                <strong>
+                    Richa Joshi
+                </strong>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section
+            id="dashboardSection"
+            class="admin-section"
+        >
+
+            <div class="welcome-box">
+
+                <h2>
+                    Welcome, Richa Joshi 👋
+                </h2>
+
+                <p>
+                    Manage E-Cell applications and contact queries
+                    from one place.
+                </p>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <span>
+                        Total Applications
+                    </span>
+
+                    <strong id="totalApplications">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Contact Queries
+                    </span>
+
+                    <strong id="totalMessages">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        E-Cell Status
+                    </span>
+
+                    <strong>
+                        Active
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPLICATIONS ================= -->
+
+        <section
+            id="applicationsSection"
+            class="admin-section hidden"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Join E-Cell Applications
+                    </h2>
+
+                    <p>
+                        Students who submitted the Join E-Cell form.
+                    </p>
+
+                </div>
+
+                <input
+                    type="search"
+                    id="applicationSearch"
+                    placeholder="Search students..."
+                    oninput="filterApplications()"
+                >
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Course</th>
+                            <th>Year</th>
+                            <th>Interest</th>
+                            <th>Message</th>
+                            <th>Submitted</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="applicationsTable">
+
+                        <tr>
+
+                            <td colspan="8">
+                                Loading applications...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT MESSAGES ================= -->
+
+        <section
+            id="messagesSection"
+            class="admin-section hidden"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Contact Queries
+                    </h2>
+
+                    <p>
+                        Messages received through the website.
+                    </p>
+
+                </div>
+
+                <input
+                    type="search"
+                    id="messageSearch"
+                    placeholder="Search queries..."
+                    oninput="filterMessages()"
+                >
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Submitted</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="messagesTable">
+
+                        <tr>
+
+                            <td colspan="5">
+                                Loading messages...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/admin-dashboard.js"></script>
+
+</body>
+
+</html>

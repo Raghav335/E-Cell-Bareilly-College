@@ -1,11 +1,15 @@
+require("dotenv").config();
+
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-
+ 
 // Routes
 const memberRoutes = require("./routes/memberRoutes");
 const eventRoutes = require("./routes/eventRoutes");
 const contactRoutes = require("./routes/contactRoutes");
+const adminRoutes = require("./routes/adminRoutes");
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -42,6 +46,7 @@ app.get("/api", (req, res) => {
 app.use("/api/members", memberRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/contacts", contactRoutes);
+app.use("/api/admin", adminRoutes);
 
 // ================================
 // FRONTEND HOME
