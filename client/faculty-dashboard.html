@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Faculty Dashboard | E-Cell Bareilly College</title>
+
+    <link rel="stylesheet" href="css/faculty.css">
+</head>
+
+<body>
+
+    <div class="faculty-dashboard">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="faculty-sidebar">
+
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    E-CELL
+                </div>
+
+                <div>
+                    <h2>E-CELL</h2>
+                    <span>Bareilly College</span>
+                </div>
+            </div>
+
+            <div class="faculty-profile">
+                <div class="profile-avatar">
+                    RS
+                </div>
+
+                <div>
+                    <strong>Roma Saxena</strong>
+                    <span>Faculty Coordinator</span>
+                </div>
+            </div>
+
+            <nav class="faculty-nav">
+
+                <button
+                    class="faculty-nav-btn active"
+                    onclick="showFacultySection('dashboard', event)"
+                >
+                    <span>▣</span>
+                    Dashboard
+                </button>
+
+                <button
+                    class="faculty-nav-btn"
+                    onclick="showFacultySection('applications', event)"
+                >
+                    <span>◉</span>
+                    Join Applications
+                </button>
+
+                <button
+                    class="faculty-nav-btn"
+                    onclick="showFacultySection('messages', event)"
+                >
+                    <span>✉</span>
+                    Contact Queries
+                </button>
+
+            </nav>
+
+            <button
+                class="faculty-logout"
+                onclick="facultyLogout()"
+            >
+                <span>↪</span>
+                Logout
+            </button>
+
+        </aside>
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="faculty-main">
+
+            <!-- TOPBAR -->
+
+            <header class="faculty-topbar">
+
+                <div>
+                    <h1 id="pageTitle">
+                        Faculty Dashboard
+                    </h1>
+
+                    <p>
+                        E-Cell • Bareilly College
+                    </p>
+                </div>
+
+                <div class="topbar-user">
+                    <div class="topbar-avatar">
+                        RS
+                    </div>
+
+                    <div>
+                        <strong>Roma Saxena</strong>
+                        <span>Faculty Coordinator</span>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- =========================
+                 DASHBOARD SECTION
+            ========================== -->
+
+            <section
+                id="facultyDashboardSection"
+                class="faculty-section"
+            >
+
+                <div class="welcome-card">
+
+                    <div>
+                        <span class="welcome-label">
+                            FACULTY COORDINATOR PANEL
+                        </span>
+
+                        <h2>
+                            Welcome, Roma Saxena
+                        </h2>
+
+                        <p>
+                            Manage E-Cell student applications
+                            and contact queries from one place.
+                        </p>
+                    </div>
+
+                    <div class="status-badge">
+                        ● E-Cell Active
+                    </div>
+
+                </div>
+
+
+                <!-- STATS -->
+
+                <div class="faculty-stats">
+
+                    <div class="faculty-stat-card">
+
+                        <div class="stat-icon">
+                            👥
+                        </div>
+
+                        <div>
+                            <span>
+                                Join Applications
+                            </span>
+
+                            <strong id="facultyTotalApplications">
+                                0
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="faculty-stat-card">
+
+                        <div class="stat-icon">
+                            ✉
+                        </div>
+
+                        <div>
+                            <span>
+                                Contact Queries
+                            </span>
+
+                            <strong id="facultyTotalMessages">
+                                0
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="faculty-stat-card">
+
+                        <div class="stat-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <span>
+                                E-Cell Status
+                            </span>
+
+                            <strong>
+                                Active
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 APPLICATIONS SECTION
+            ========================== -->
+
+            <section
+                id="facultyApplicationsSection"
+                class="faculty-section hidden"
+            >
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>
+                            Join E-Cell Applications
+                        </h2>
+
+                        <p>
+                            View student membership applications.
+                        </p>
+                    </div>
+
+                    <input
+                        type="search"
+                        id="facultyApplicationSearch"
+                        placeholder="Search students..."
+                        oninput="filterFacultyApplications()"
+                    >
+
+                </div>
+
+                <div class="faculty-table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Course</th>
+                                <th>Year</th>
+                                <th>Interest</th>
+                                <th>Message</th>
+                                <th>Submitted</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="facultyApplicationsTable">
+
+                            <tr>
+                                <td colspan="8">
+                                    Loading applications...
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 MESSAGES SECTION
+            ========================== -->
+
+            <section
+                id="facultyMessagesSection"
+                class="faculty-section hidden"
+            >
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>
+                            Contact Queries
+                        </h2>
+
+                        <p>
+                            Messages submitted through the website.
+                        </p>
+                    </div>
+
+                    <input
+                        type="search"
+                        id="facultyMessageSearch"
+                        placeholder="Search queries..."
+                        oninput="filterFacultyMessages()"
+                    >
+
+                </div>
+
+                <div class="faculty-table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Subject</th>
+                                <th>Message</th>
+                                <th>Submitted</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="facultyMessagesTable">
+
+                            <tr>
+                                <td colspan="5">
+                                    Loading messages...
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/faculty-dashboard.js"></script>
+
+</body>
+
+</html>

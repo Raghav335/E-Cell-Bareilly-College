@@ -9,6 +9,7 @@ const memberRoutes = require("./routes/memberRoutes");
 const eventRoutes = require("./routes/eventRoutes");
 const contactRoutes = require("./routes/contactRoutes");
 const adminRoutes = require("./routes/adminRoutes");
+const facultyRoutes = require("./routes/facultyRoutes");
 
 
 const app = express();
@@ -47,6 +48,7 @@ app.use("/api/members", memberRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/contacts", contactRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/faculty", facultyRoutes);
 
 // ================================
 // FRONTEND HOME
