@@ -4,55 +4,48 @@
     "name": "Richa Joshi",
     "role": "President",
     "department": "E-Cell, Bareilly College",
-    "image": "/assets/images/team/richa.jpg",
-    "linkedin": "#"
+    "image": "/assets/images/team/richa.jpg"
   },
   {
     "id": 2,
     "name": "Devansh Saxena",
     "role": "Vice President",
     "department": "E-Cell, Bareilly College",
-    "image": "/assets/images/team/devansh.jpg",
-    "linkedin": "#"
+    "image": "/assets/images/team/devansh.jpg"
   },
   {
     "id": 3,
     "name": "Satyam Rastogi",
     "role": "Secretary",
     "department": "E-Cell, Bareilly College",
-    "image": "/assets/images/team/satyam.jpg",
-    "linkedin": "#"
+    "image": "/assets/images/team/satyam.jpg"
   },
   {
     "id": 4,
-    "name": "Neelam Gupta",
-    "role": "Finance & Documentation Head",
+    "name": "Arpit Sharma",
+    "role": "Technical & Innovation Head",
     "department": "E-Cell, Bareilly College",
-    "image": "/assets/images/team/neelam.jpg",
-    "linkedin": "#"
+    "image": "/assets/images/team/arpit.jpg"
   },
   {
     "id": 5,
     "name": "Raghav Gupta",
     "role": "Event Management Head",
     "department": "E-Cell, Bareilly College",
-    "image": "/assets/images/team/raghav.jpg",
-    "linkedin": "#"
+    "image": "/assets/images/team/raghav.jpg"
   },
   {
     "id": 6,
-    "name": "Ishita Singh Tomar",
-    "role": "Public Relations & Marketing Head",
+    "name": "Neelam Gupta",
+    "role": "Finance & Documentation Head",
     "department": "E-Cell, Bareilly College",
-    "image": "/assets/images/team/ishita.jpg",
-    "linkedin": "#"
+    "image": "/assets/images/team/neelam.jpg"
   },
   {
     "id": 7,
-    "name": "Arpit Sharma",
-    "role": "Technical & Innovation Head",
+    "name": "Ishita Singh Tomar",
+    "role": "Public Relations & Marketing Head",
     "department": "E-Cell, Bareilly College",
-    "image": "/assets/images/team/arpit.jpg",
-    "linkedin": "#"
+    "image": "/assets/images/team/ishita.jpg"
   }
 ]
